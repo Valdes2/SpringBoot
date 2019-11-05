@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 public class InjectData {
 
     @Autowired
-    BookService bookService;
+    private BookService bookService;
 
     @PostConstruct
     public void initData() {

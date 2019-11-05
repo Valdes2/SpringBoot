@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 public class BookServiceImpl implements BookService {
 
     @Autowired
-    BookRepository bookRepository;
+    private BookRepository bookRepository;
 
     @Override
     public void addBook(BookDto bookDto) {
@@ -35,7 +35,6 @@ public class BookServiceImpl implements BookService {
         Book book = findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Can`t find book with id: " + id));
         updatedBook.setId(book.getId());
-        bookRepository.deleteById(id);
         return bookRepository.saveAndFlush(updatedBook);
     }
 

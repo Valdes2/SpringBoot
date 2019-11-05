@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class BookController {
 
     @Autowired
-    BookService bookService;
+    private BookService bookService;
 
     @GetMapping
     public List<Book> allBooks() {
