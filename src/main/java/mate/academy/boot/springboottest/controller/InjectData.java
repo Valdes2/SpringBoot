@@ -1,12 +1,11 @@
 package mate.academy.boot.springboottest.controller;
 
+import javax.annotation.PostConstruct;
+
 import mate.academy.boot.springboottest.dto.BookDto;
-import mate.academy.boot.springboottest.entity.Book;
 import mate.academy.boot.springboottest.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import javax.annotation.PostConstruct;
 
 @Component
 public class InjectData {
